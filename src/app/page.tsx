@@ -4,9 +4,7 @@ export default async function Home() {
 
   await new Promise((resolve) => setTimeout(resolve, 2000));
 
-  const response = await fetch("https://api.github.com/users/evaniotech", {
-    cache: "no-store",
-  });
+  const response = await fetch("https://api.github.com/users/evaniotech")
   const user = await response.json();
   
   return (
